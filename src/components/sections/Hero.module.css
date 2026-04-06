@@ -1,0 +1,150 @@
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.heroContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .heroContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.greeting {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-color);
+}
+
+.typewriterWrapper {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  min-height: 6rem;
+}
+
+.staticText {
+  color: var(--text-muted);
+}
+
+.dynamicText {
+  position: relative;
+  display: inline-block;
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+.actionButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.socialIcon {
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.heroImageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: clamp(280px, 40vw, 450px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Background blob animation for the hero image */
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color), #ff9800);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph 8s ease-in-out infinite both alternate;
+  opacity: 0.6;
+  filter: blur(40px);
+  z-index: -1;
+}
+
+@keyframes morph {
+  0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: scale(1); }
+  34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; transform: scale(0.95); }
+  67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; transform: scale(1.05); }
+  100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: scale(1); }
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: var(--card-bg);
+  border: 4px solid var(--glass-border);
+  border-radius: 50%;
+  box-shadow: var(--shadow-hover);
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.imageWrapper:hover .profileImage {
+  transform: scale(1.02);
+}

@@ -1,0 +1,156 @@
+
+
+.certGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .certGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.certCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.certBadgeImg {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.certIconFallback {
+  flex-shrink: 0;
+}
+
+.certTitle {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.certOrg {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.leadershipTitle {
+  margin-top: 6rem;
+}
+
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordionItem {
+  overflow: hidden;
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.accordionHeader:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.accordionRole {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.accordionOrg {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.accordionBody {
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--glass-border);
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0.6rem;
+  bottom: -1rem;
+  width: 2px;
+  background-color: var(--text-muted);
+  opacity: 0.3;
+}
+
+.timelineItem:last-child::before {
+  display: none;
+}
+
+.timelineDot {
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--text-muted);
+  z-index: 1;
+}
+
+.timelineTitle {
+  font-size: 1.15rem;
+  color: var(--text-color);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.timelineDuration {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.timelineDesc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}

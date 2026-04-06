@@ -1,0 +1,115 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+  padding: 0.5rem 0;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.link:hover {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.themeToggle:hover {
+  background-color: var(--glass-border);
+  color: var(--primary-color);
+}
+
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background: var(--bg-color);
+    width: 250px;
+    height: 100vh;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: right 0.3s ease;
+  }
+
+  .navLinks.mobileOpen {
+    right: 0;
+  }
+
+  .mobileMenuBtn {
+    display: flex;
+  }
+}
