@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Award, ChevronDown } from 'lucide-react';
-import { FaAws, FaBuilding, FaChartLine } from 'react-icons/fa';
+import { FaAws, FaBuilding, FaChartLine, FaChartBar, FaChartPie } from 'react-icons/fa';
 import {
   SiPython, SiDocker, SiJupyter,
   SiTensorflow, SiFigma, SiJira,
-  SiMysql, SiPowerbi
+  SiMysql
 } from 'react-icons/si';
 import LogoLoop from './LogoLoop';
 import styles from './Skills.module.css';
@@ -22,7 +22,7 @@ const techLogos = [
   { node: <SiMysql />, title: "SQL" },
   { node: <FaBuilding />, title: "Corporate and System Research" },
   { node: <FaChartLine />, title: "Financial Market Analysis (Globally)" },
-  { node: <SiPowerbi />, title: "Visualization (Power BI)" }
+  { node: <FaChartPie />, title: "Visualization (Power BI)" }
 ];
 
 const CERTIFICATIONS = [
@@ -38,9 +38,9 @@ const CERTIFICATIONS = [
 ];
 
 const LEADERSHIP = [
-  { 
-    role: "Secretary", 
-    org: "Computer Society of India (CSI-AITR)", 
+  {
+    role: "Secretary",
+    org: "Computer Society of India (CSI-AITR)",
     image: "/image copy 4.png",
     roles: [
       {
@@ -55,9 +55,9 @@ const LEADERSHIP = [
       }
     ]
   },
-  { 
-    role: "Vice President", 
-    org: "Shagal, The Hobby Club", 
+  {
+    role: "Vice President",
+    org: "Shagal, The Hobby Club",
     image: "/image copy 5.png",
     roles: [
       {
@@ -67,9 +67,9 @@ const LEADERSHIP = [
       }
     ]
   },
-  { 
-    role: "Secretary", 
-    org: "Data Science and Analytics Club", 
+  {
+    role: "Secretary",
+    org: "Data Science and Analytics Club",
     image: "/image copy 3.png",
     roles: [
       {
@@ -193,3 +193,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
