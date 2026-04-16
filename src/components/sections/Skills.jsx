@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Award, ChevronDown } from 'lucide-react';
-import { FaAws } from 'react-icons/fa';
+import { FaAws, FaBuilding, FaChartLine } from 'react-icons/fa';
 import {
   SiPython, SiDocker, SiJupyter,
-  SiTensorflow, SiFigma, SiJira, SiReact, SiNodedotjs,
-  SiMongodb, SiPostgresql
+  SiTensorflow, SiFigma, SiJira,
+  SiMysql, SiPowerbi
 } from 'react-icons/si';
 import LogoLoop from './LogoLoop';
 import styles from './Skills.module.css';
@@ -19,10 +19,10 @@ const techLogos = [
   { node: <SiTensorflow />, title: "Machine Learning" },
   { node: <SiFigma />, title: "UI/UX Design" },
   { node: <SiJira />, title: "Product Management" },
-  { node: <SiReact />, title: "React" },
-  { node: <SiNodedotjs />, title: "Node.js" },
-  { node: <SiMongodb />, title: "MongoDB" },
-  { node: <SiPostgresql />, title: "SQL" }
+  { node: <SiMysql />, title: "SQL" },
+  { node: <FaBuilding />, title: "Corporate and System Research" },
+  { node: <FaChartLine />, title: "Financial Market Analysis (Globally)" },
+  { node: <SiPowerbi />, title: "Visualization (Power BI)" }
 ];
 
 const CERTIFICATIONS = [
