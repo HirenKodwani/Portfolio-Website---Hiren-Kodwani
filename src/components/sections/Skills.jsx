@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Award, ChevronDown } from 'lucide-react';
-import { FaAws, FaBuilding, FaChartLine, FaChartBar, FaChartPie } from 'react-icons/fa';
+import { FaAws, FaBuilding, FaChartLine, FaChartBar, FaChartPie, FaProjectDiagram, FaNetworkWired } from 'react-icons/fa';
 import {
   SiPython, SiDocker, SiJupyter,
   SiTensorflow, SiFigma, SiJira,
-  SiMysql
+  SiMysql, SiAndroidstudio, SiPostman
 } from 'react-icons/si';
 import LogoLoop from './LogoLoop';
 import styles from './Skills.module.css';
@@ -20,6 +20,10 @@ const techLogos = [
   { node: <SiFigma />, title: "UI/UX Design" },
   { node: <SiJira />, title: "Product Management" },
   { node: <SiMysql />, title: "SQL" },
+  { node: <SiAndroidstudio />, title: "Android Studio" },
+  { node: <FaProjectDiagram />, title: "SDLC" },
+  { node: <FaNetworkWired />, title: "Rest API" },
+  { node: <SiPostman />, title: "Postman" },
   { node: <FaBuilding />, title: "Corporate and System Research" },
   { node: <FaChartLine />, title: "Financial Market Analysis (Globally)" },
   { node: <FaChartPie />, title: "Visualization (Power BI)" }
@@ -193,4 +197,3 @@ const Skills = () => {
 };
 
 export default Skills;
-

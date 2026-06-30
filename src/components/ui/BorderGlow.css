@@ -82,8 +82,8 @@
       from var(--cursor-angle) at center, black 2.5%, transparent 10%, transparent 90%, black 97.5%
     );
 
-  opacity: calc((var(--edge-proximity) - var(--edge-sensitivity)) / (100 - var(--edge-sensitivity)));
-  mix-blend-mode: plus-lighter;
+  opacity: calc(((var(--edge-proximity) - var(--edge-sensitivity)) / (100 - var(--edge-sensitivity))) * var(--glow-halo-opacity, 1));
+  mix-blend-mode: var(--glow-blend-mode, plus-lighter);
 }
 
 .border-glow-card > .edge-light::before {

@@ -76,11 +76,26 @@
   margin-bottom: 5px;
 }
 
+.companyWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.companyLogo {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  object-fit: contain;
+  background-color: white;
+}
+
 .company {
   font-size: 1rem;
   color: var(--text-muted);
   font-weight: 400;
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
 .description {
