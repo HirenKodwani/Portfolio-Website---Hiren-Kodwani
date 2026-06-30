@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Award, ChevronDown } from 'lucide-react';
@@ -31,6 +32,7 @@ const techLogos = [
 
 const CERTIFICATIONS = [
   { title: "AWS Certified Cloud Practitioner", org: "Amazon Web Services", image: "/aws-cp.png" },
+  { title: "AWS Certified CloudOps Engineer - Associate", org: "Amazon Web Services", image: "/aws-certified-cloudops-engineer-associate.png" },
   { title: "AWS Certified Solutions Architect – Associate", org: "Amazon Web Services", image: "/aws-sa.png" },
   { title: "Machine Learning and Deep Learning (Topper 5%)", org: "NPTEL", image: "/image.png" },
   { title: "Project Management (Elite + Silver)", org: "NPTEL", image: "/image.png" },
